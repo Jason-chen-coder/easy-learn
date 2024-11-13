@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { DatePicker } from 'antd';
+import { Button, Toast } from 'antd-mobile'
+
+import 'antd-mobile/es/global'
 const graphqlBaseUrl = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 function App() {
@@ -18,6 +21,15 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <Button
+        color='primary'
+        onClick={() => {
+          console.log('按钮被点击了');
+          Toast.show('点击成功');
+        }}
+      >
+        点击我
+      </Button>
       <h1>Vite + React</h1>
       <h1 className="text-3xl font-bold underline">
         Hello world!
